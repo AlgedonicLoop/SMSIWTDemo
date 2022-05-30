@@ -6,7 +6,7 @@ import * as siwt from '@stakenow/siwt'
 import './style.css'
 
 const dAppClient = new DAppClient({
-  name: 'SIWT Demo',
+  name: 'Sensor Model NFT SIWT Demo',
   preferredNetwork: NetworkType.ITHACANET,
 })
 
@@ -47,6 +47,28 @@ const getProtectedData = () => {
   })
     .then(response => {
       setBackground(response.status)
+      console.log('Getting File soon');
+      if (response.status === 200) {
+        console.log('Getting File');
+        fetch(`${API_URL}/sensormodels/OSMPDummySensor.fmu`, {
+          method: 'GET',
+          headers: {
+            authorization: `Bearer ${state.accessToken}`,
+          },
+        })
+        .then(resp => resp.blob())
+          .then(blobobject => {
+              const blob = window.URL.createObjectURL(blobobject);
+              const anchor = document.createElement('a');
+                anchor.style.display = 'none';
+              anchor.href = blob;
+              anchor.download = "OSMPDummySensor.fmu";
+              document.body.appendChild(anchor);
+              anchor.click();
+              window.URL.revokeObjectURL(blob);
+          })
+          .catch(() => console.log('An error in downloading the file'));
+      }
       return response.json()
     })
     .then(data => {

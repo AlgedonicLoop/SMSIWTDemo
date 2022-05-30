@@ -39,7 +39,7 @@ const authenticateAccess = async (req, res, next) => {
     const pkh = verifyAccessToken(accessToken)
     if (pkh) {
       const accessControl = await queryAccessControl({
-        contractAddress: 'KT1VsJKRrrShExaN1WnzAWpe6nbDWmp19b7G',
+        contractAddress: 'KT1UhBEM4AUaQ13sWqLKBL4o7HAc8D7zMzjK',
         parameters: {
           pkh,
         },
@@ -124,6 +124,10 @@ app.get('/signin-required', authenticateSignIn, (req, res) => {
 
 app.get('/protected', authenticateAccess, (req, res) => {
   res.send(JSON.stringify('Premium content is available as you own the respective subscription NFT.'))
+})
+
+app.get('/sensormodels/OSMPDummySensor.fmu', authenticateAccess, (req, res) => {
+  res.download('sensormodels/OSMPDummySensor.fmu')
 })
 
 app.listen(port, () => {
