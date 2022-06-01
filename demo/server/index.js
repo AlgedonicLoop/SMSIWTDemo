@@ -50,7 +50,13 @@ const authenticateAccess = async (req, res, next) => {
       })
 
       if (accessControl.passedTest) {
-        return next()
+        if (Object.keys(req.params).length === 0) {
+	  return next()
+        }
+        if (req.params.content === 'OSMPDummySensor.fmu' && accessControl.tokens.includes('1')) {
+	  return next()
+	}
+        return res.status(403).send(JSON.stringify('You need a matching subscription NFT to access this premium content.'))
       }
       return res.status(403).send(JSON.stringify('You need the subscription NFT to access premium content.'))
     }
@@ -126,8 +132,12 @@ app.get('/protected', authenticateAccess, (req, res) => {
   res.send(JSON.stringify('Premium content is available as you own the respective subscription NFT.'))
 })
 
-app.get('/sensormodels/OSMPDummySensor.fmu', authenticateAccess, (req, res) => {
-  res.download('sensormodels/OSMPDummySensor.fmu')
+app.get('/sensormodels/:content', authenticateAccess, (req, res) => {
+  res.download('sensormodels/' + req.params.content)
+})
+
+app.get('/metadata/:content', authenticateSignIn, (req, res) => {
+  res.download('metadata/' + req.params.content)
 })
 
 app.listen(port, () => {

@@ -1,0 +1,23 @@
+{
+  "name": "io.algedonicloop.nftdemo.sensormodels",
+  "description": "Sensor Model NFT Contract",
+  "homepage": "https://algedonicloop.io/",
+  "authors": [
+    "Algedonic Loop GmbH <info@algedonicloop.io>"
+  ],
+  "version": "1.0.0",
+  "license": {
+    "name": "MIT"
+  },
+  "interfaces": [
+    "TZIP-016",
+    "TZIP-012",
+    "TZIP-021"
+  ],
+  "source": {
+    "tools": [
+      "LIGO"
+    ],
+    "location": "https://github.com/oxheadalpha/nft-tutorial"
+  }
+}

@@ -1,0 +1,133 @@
+{
+    "$schema": "SRMD.json",
+    "SimulationResourceMetaData": {
+        "version": 0.5,
+        "name": "ARS84x Model Meta-Data",
+        "classifications": [
+            {
+                "type": "de.setlevel.srmd.model-meta-data",
+                "entries": [
+                    {
+                        "keyword": "model.type",
+                        "value": "sensor"
+                    },
+                    {
+                        "keyword": "sensor.manufacturer",
+                        "value": "CompanyX"
+                    },
+                    {
+                        "keyword": "sensor.family",
+                        "value": "ARS8xx"
+                    },
+                    {
+                        "keyword": "sensor.name",
+                        "value": "ARS84x"
+                    },
+                    {
+                        "keyword": "sensor.version",
+                        "value": "HGW112"
+                    },
+                    {
+                        "keyword": "sensor.manufacturer.partnumber",
+                        "value": "08-15-47-11"
+                    },
+                    {
+                        "keyword": "sensor.type",
+                        "value": "object-output"
+                    },
+                    {
+                        "keyword": "sensor.technology",
+                        "value": "radar"
+                    },
+                    {
+                        "keyword": "sensor.technology.variant",
+                        "value": "long-range"
+                    },
+                    {
+                        "keyword": "model.manufacturer",
+                        "value": "CompanyX"
+                    },
+                    {
+                        "keyword": "model.family",
+                        "value": "ARS8xx"
+                    },
+                    {
+                        "keyword": "model.name",
+                        "value": "ARS84x"
+                    },
+                    {
+                        "keyword": "model.version",
+                        "value": "AE_SIM_00.02.28"
+                    },
+                    {
+                        "keyword": "model.releasedate",
+                        "value": "2020-04-03"
+                    },
+                    {
+                        "keyword": "model.status",
+                        "value": "In Development"
+                    },
+                    {
+                        "keyword": "model.guid",
+                        "value": "bbd7b2bd251f430797b8f36208d20c4b"
+                    },
+                    {
+                        "keyword": "model.purpose",
+                        "value": "HAD function validation in OEM environment at object-list level"
+                    },
+                    {
+                        "keyword": "model.modelling-approach",
+                        "value": "Sensor model is purely object-list driven, weather effects are not modelled."
+                    },
+                    {
+                        "keyword": "model.preconditions",
+                        "value": "Object-list input contains accurate bounding box values"
+                    },
+                    {
+                        "keyword": "model.validity-range",
+                        "value": "Sensor model is only accurate up to sensor/vehicle speeds of less than 150km/h"
+                    },
+                    {
+                        "keyword": "model.specification",
+                        "value": "link to specification document"
+                    },
+                    {
+                        "keyword": "model.verification.status",
+                        "value": false
+                    },
+                    {"keyword": "model.verification.report"},
+                    {"keyword": "model.validation.concept"},
+                    {
+                        "keyword": "model.validation.status",
+                        "value": false
+                    },
+                    {
+                        "keyword": "model.validation.platform",
+                        "value": "PMSF FMIBench 1.9.9.4 using osi3test 0.6.0 on Windows 10 1809"
+                    },
+                    {"keyword": "model.validation.report"},
+                    {
+                        "keyword": "model.limitations",
+                        "value": "This delivery is a pre-release and the model is intended to be used for checking the interfaces of the simulation toolchain.\n            The model is not validated; thus it is not intended to be used for validation or verification of any sensor, especially not for ARS810 or ARS840. In particular the existence\n            of this model shall not be used to imply the existence of sensors ARS810 nor ARS840 nor their properties.\n            \n            This delivery is not developed according to process defined in ISO 26262 (Standard for Functional Safety).\n        "
+                    },
+                    {
+                        "keyword": "model.implementation.format",
+                        "value": "OSMP 1.0/OSI 3.1.2/FMI 2.0"
+                    },
+                    {
+                        "keyword": "model.implementation.preconditions",
+                        "value": "Model needs Windows 10 1809 or newer with nvidia Drivers version 389.12 or newer and OpenCL 2.0 capable GPU"
+                    },
+                    {
+                        "keyword": "model.implementation.performance-characteristics",
+                        "value": "Potentially real-time capable, if less than 100 objects in object list input at any one time"
+                    },
+                    {
+                        "keyword": "model.integration.requirements",
+                        "value": "link to requirements and considerations for operating the model"
+                    }
+                ]
+            }
+        ]
+    }
+}

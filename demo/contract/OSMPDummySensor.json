@@ -1,0 +1,33 @@
+{
+  "decimals": 0,
+  "isBooleanAmount": true,
+  "name": "OSMPDummySensor",
+  "description": "Demonstration Sensor Model for NFTDemo",
+  "tags": [
+    "SensorModel",
+    "ARS84x",
+    "nft"
+  ],
+  "minter": "tz1PUdfZFAyHMbTsFm12kehL4XwEeqKpgWf4",
+  "artifactUri": "https://nftdemo.algedonicloop.io/sensormodels/OSMPDummySensor.fmu",
+  "externalUri": "ipfs://QmT5NF9okpurrSoFTYVkjHNj8voF67TbTxqiFuceRL24mr",
+  "identifier": "aa296d95702cf4be10c4394cb157cb636f92ac794934e8aa2e284307a37b198b",
+  "publishers": [ "Algedonic Loop GmbH" ],
+  "rights": "All rights reserved.",
+  "formats": [
+    {
+      "uri": "https://nftdemo.algedonicloop.io/sensormodels/OSMPDummySensor.fmu",
+      "hash": "aa296d95702cf4be10c4394cb157cb636f92ac794934e8aa2e284307a37b198b",
+      "mimeType": "application/x-fmu-sharedlibrary",
+      "fileSize": 3929312,
+      "fileName": "OSMPDummySensor.fmu"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "de.setlevel.srmd.model-meta-data",
+      "value": "ipfs://QmU6MWZEgnSe9o5huUC3tZjJkG2ZdAfRweWtruof5AGwqa",
+      "type": "uri"
+    }
+  ]
+}

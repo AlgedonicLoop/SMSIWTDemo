@@ -6,6 +6,7 @@
   h1 {
     @apply text-4xl;
     @apply font-bold;
+    @apply text-blue-600;
   }
   h2 {
     @apply text-xl;
@@ -15,5 +16,9 @@
   }
   a {
     @apply text-blue-600 underline;
+  }
+
+  div.xddemo-container {
+    background-image: url("LoopsBackground.png");
   }
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<srmd:SimulationResourceMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://apps.pmsf.net/STMD/SimulationResourceMetaData SRMD.xsd"
+    xmlns:srmd="http://apps.pmsf.net/STMD/SimulationResourceMetaData"
+    version="0.5" name="ARS84x Model Meta-Data">
+    <Classification xmlns="http://apps.pmsf.net/SSPTraceability/SSPTraceabilityCommon" type="de.setlevel.srmd.model-meta-data">
+        <ClassificationEntry keyword="model.type">sensor</ClassificationEntry>
+        <ClassificationEntry keyword="sensor.manufacturer">CompanyX</ClassificationEntry>
+        <ClassificationEntry keyword="sensor.family">ARS8xx</ClassificationEntry>
+        <ClassificationEntry keyword="sensor.name">ARS84x</ClassificationEntry>
+        <ClassificationEntry keyword="sensor.version">HGW112</ClassificationEntry>
+        <ClassificationEntry keyword="sensor.manufacturer.partnumber">08-15-47-11</ClassificationEntry>
+        <ClassificationEntry keyword="sensor.type">object-output</ClassificationEntry>
+        <ClassificationEntry keyword="sensor.technology">radar</ClassificationEntry>
+        <ClassificationEntry keyword="sensor.technology.variant">long-range</ClassificationEntry>
+
+        <ClassificationEntry keyword="model.manufacturer">CompanyX</ClassificationEntry>
+        <ClassificationEntry keyword="model.family">ARS8xx</ClassificationEntry>
+        <ClassificationEntry keyword="model.name">ARS84x</ClassificationEntry>
+        <ClassificationEntry keyword="model.version">AE_SIM_00.02.28</ClassificationEntry>
+        <ClassificationEntry keyword="model.releasedate">2020-04-03</ClassificationEntry>
+        <ClassificationEntry keyword="model.status">In Development</ClassificationEntry>
+        <ClassificationEntry keyword="model.guid">bbd7b2bd251f430797b8f36208d20c4b</ClassificationEntry>
+        <ClassificationEntry keyword="model.purpose">HAD function validation in OEM environment at object-list level</ClassificationEntry>
+        
+        <ClassificationEntry keyword="model.modelling-approach">Sensor model is purely object-list driven, weather effects are not modelled.</ClassificationEntry>
+        <ClassificationEntry keyword="model.preconditions">Object-list input contains accurate bounding box values</ClassificationEntry>
+        <ClassificationEntry keyword="model.validity-range">Sensor model is only accurate up to sensor/vehicle speeds of less than 150km/h</ClassificationEntry>
+        <ClassificationEntry keyword="model.specification">link to specification document</ClassificationEntry>
+        <ClassificationEntry keyword="model.verification.status">false</ClassificationEntry>
+        <ClassificationEntry keyword="model.verification.report"/>
+        <ClassificationEntry keyword="model.validation.concept"/>
+        <ClassificationEntry keyword="model.validation.status">false</ClassificationEntry>
+        <ClassificationEntry keyword="model.validation.platform">PMSF FMIBench 1.9.9.4 using osi3test 0.6.0 on Windows 10 1809</ClassificationEntry>
+        <ClassificationEntry keyword="model.validation.report"/>
+        <ClassificationEntry keyword="model.limitations">This delivery is a pre-release and the model is intended to be used for checking the interfaces of the simulation toolchain.
+            The model is not validated; thus it is not intended to be used for validation or verification of any sensor, especially not for ARS810 or ARS840. In particular the existence
+            of this model shall not be used to imply the existence of sensors ARS810 nor ARS840 nor their properties.
+            
+            This delivery is not developed according to process defined in ISO 26262 (Standard for Functional Safety).
+        </ClassificationEntry>
+        
+        <ClassificationEntry keyword="model.implementation.format">OSMP 1.0/OSI 3.1.2/FMI 2.0</ClassificationEntry>
+        <ClassificationEntry keyword="model.implementation.preconditions">Model needs Windows 10 1809 or newer with nvidia Drivers version 389.12 or newer and OpenCL 2.0 capable GPU</ClassificationEntry>
+        <ClassificationEntry keyword="model.implementation.performance-characteristics">Potentially real-time capable, if less than 100 objects in object list input at any one time</ClassificationEntry>
+        
+        <ClassificationEntry keyword="model.integration.requirements">link to requirements and considerations for operating the model</ClassificationEntry>
+        
+    </Classification>
+</srmd:SimulationResourceMetaData>

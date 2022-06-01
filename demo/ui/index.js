@@ -47,9 +47,7 @@ const getProtectedData = () => {
   })
     .then(response => {
       setBackground(response.status)
-      console.log('Getting File soon');
       if (response.status === 200) {
-        console.log('Getting File');
         fetch(`${API_URL}/sensormodels/OSMPDummySensor.fmu`, {
           method: 'GET',
           headers: {
@@ -90,6 +88,26 @@ const getSignedInData = () => {
   })
     .then(response => {
       setBackground(response.status)
+      if (response.status === 200) {
+        fetch(`${API_URL}/metadata/ARS84x.json`, {
+          method: 'GET',
+          headers: {
+            authorization: `Bearer ${state.accessToken}`,
+          },
+        })
+        .then(resp => resp.blob())
+          .then(blobobject => {
+              const blob = window.URL.createObjectURL(blobobject);
+              const anchor = document.createElement('a');
+                anchor.style.display = 'none';
+              anchor.href = blob;
+              anchor.download = "ARS84x.json";
+              document.body.appendChild(anchor);
+              anchor.click();
+              window.URL.revokeObjectURL(blob);
+          })
+          .catch(() => console.log('An error in downloading the file'));
+      }
       return response.json()
     })
     .then(data => {
