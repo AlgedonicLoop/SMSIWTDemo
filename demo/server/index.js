@@ -14,7 +14,7 @@ const {
 const app = express()
 const port = process.env.PORT || 3000
 
-app.use(cors())
+app.use(cors({origin: 'https://nftdemo.algedonicloop.io'}))
 app.use(bodyParser.json())
 
 const authenticateSignIn = async (req, res, next) => {

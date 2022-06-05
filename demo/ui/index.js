@@ -11,7 +11,7 @@ const dAppClient = new DAppClient({
 })
 
 const state = { accessToken: '' }
-const API_URL = process.env.API_URL || 'http://localhost:3000'
+const API_URL = process.env.API_URL || 'https://nftdemo.algedonicloop.io:3000'
 
 const setBackground = status => {
   const DemoContainer = document.getElementsByClassName('demo-container')[0]
