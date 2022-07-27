@@ -7,7 +7,7 @@ import './style.css'
 
 const dAppClient = new DAppClient({
   name: 'Sensor Model NFT SIWT Demo',
-  preferredNetwork: NetworkType.ITHACANET,
+  preferredNetwork: NetworkType.GHOSTNET,
 })
 
 const state = { accessToken: '' }
@@ -143,8 +143,8 @@ const login = async () => {
     // request wallet permissions with Beacon dAppClient
     const walletPermissions = await dAppClient.requestPermissions({
       network: {
-        type: NetworkType.ITHACANET,
-        rpcUrl: 'https://rpc.tzkt.io/ithacanet',
+        type: NetworkType.GHOSTNET,
+        rpcUrl: 'https://rpc.tzkt.io/ghostnet',
       },
     })
 
