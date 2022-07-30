@@ -150,7 +150,7 @@ const login = async () => {
 
     // create the message to be signed
     const messagePayload = siwt.createMessagePayload({
-      dappUrl: 'siwt.stakenow.fi',
+      dappUrl: 'nftdemo.algedonicloop.io',
       pkh: walletPermissions.address,
     })
 
